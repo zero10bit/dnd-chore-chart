@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/dnd-chore-chart/static/css/main.793e7f68.css",
-    "main.js": "/dnd-chore-chart/static/js/main.888358ff.js",
+    "main.css": "/dnd-chore-chart/static/css/main.0b5c55f4.css",
+    "main.js": "/dnd-chore-chart/static/js/main.4645d5bb.js",
     "static/js/488.216fb58a.chunk.js": "/dnd-chore-chart/static/js/488.216fb58a.chunk.js",
+    "static/media/dracolich.webp": "/dnd-chore-chart/static/media/dracolich.41ae7d277e2dfb53737e.webp",
+    "static/media/vecna.webp": "/dnd-chore-chart/static/media/vecna.91d1bf855bdccbfacd3a.webp",
+    "static/media/orcus.webp": "/dnd-chore-chart/static/media/orcus.fd624649a27a7eb46658.webp",
+    "static/media/demogorgon.webp": "/dnd-chore-chart/static/media/demogorgon.fdf1841677a3e2086acb.webp",
+    "static/media/tiamat.webp": "/dnd-chore-chart/static/media/tiamat.627d23843ba8009cce56.webp",
+    "static/media/acererak.webp": "/dnd-chore-chart/static/media/acererak.dc70b7d628ae49c554c5.webp",
+    "static/media/lich.webp": "/dnd-chore-chart/static/media/lich.137fa0b4eba91f1c4ec2.webp",
+    "static/media/zariel.webp": "/dnd-chore-chart/static/media/zariel.ac40a45d20f51a59c07d.webp",
+    "static/media/beholder.webp": "/dnd-chore-chart/static/media/beholder.849990d22486ff9ebef9.webp",
+    "static/media/mind_flayer.webp": "/dnd-chore-chart/static/media/mind_flayer.0966149f29c51975f473.webp",
     "index.html": "/dnd-chore-chart/index.html",
-    "main.793e7f68.css.map": "/dnd-chore-chart/static/css/main.793e7f68.css.map",
-    "main.888358ff.js.map": "/dnd-chore-chart/static/js/main.888358ff.js.map",
+    "main.0b5c55f4.css.map": "/dnd-chore-chart/static/css/main.0b5c55f4.css.map",
+    "main.4645d5bb.js.map": "/dnd-chore-chart/static/js/main.4645d5bb.js.map",
     "488.216fb58a.chunk.js.map": "/dnd-chore-chart/static/js/488.216fb58a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.793e7f68.css",
-    "static/js/main.888358ff.js"
+    "static/css/main.0b5c55f4.css",
+    "static/js/main.4645d5bb.js"
   ]
 }
