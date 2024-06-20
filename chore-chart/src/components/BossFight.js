@@ -3,16 +3,16 @@ import React, { useState, useEffect } from 'react';
 
 // List of bosses with image paths
 const bossList = [
-  { name: 'Tiamat', image: '/src/img/tiamat.webp' },
-  { name: 'Demogorgon', image: '/src/img/demogorgon.webp' },
-  { name: 'Orcus', image: '/src/img/orcus.png' },
-  { name: 'Acererak', image: '/src/img/acererak.png' },
-  { name: 'Zariel', image: '/src/img/zariel.png' },
-  { name: 'Vecna', image: '/src/img/vecna.png' },
-  { name: 'Beholder', image: '/src/img/beholder.png' },
-  { name: 'Mind Flayer', image: '/src/img/mind_flayer.png' },
-  { name: 'Lich', image: '/src/img/lich.png' },
-  { name: 'Dracolich', image: '/src/img/dracolich.png' }
+  { name: 'Tiamat', image: require('../img/tiamat.webp') },
+  { name: 'Demogorgon', image: require('../img/demogorgon.webp') },
+  { name: 'Orcus', image: require('../img/orcus.webp') },
+  { name: 'Acererak', image: require('../img/acererak.webp') },
+  { name: 'Zariel', image: require('../img/zariel.webp') },
+  { name: 'Vecna', image: require('../img/vecna.webp') },
+  { name: 'Beholder', image: require('../img/beholder.webp') },
+  { name: 'Mind Flayer', image: require('../img/mind_flayer.webp') },
+  { name: 'Lich', image: require('../img/lich.webp') },
+  { name: 'Dracolich', image: require('../img/dracolich.webp') }
 ];
 
 function BossFight({ character }) {
@@ -21,6 +21,20 @@ function BossFight({ character }) {
   const [bossHP, setBossHP] = useState(0);
   const [maxHP, setMaxHP] = useState(0);
   const [diceRoll, setDiceRoll] = useState(0);
+  const [newChore, setNewChore] = useState({ name: '', points: 0, isRandom: false });
+
+  // Load chores from local storage
+  useEffect(() => {
+    const savedChores = JSON.parse(localStorage.getItem('dndChoreChartChores'));
+    if (savedChores) {
+      setChores(savedChores);
+    }
+  }, []);
+
+  // Save chores to local storage
+  useEffect(() => {
+    localStorage.setItem('dndChoreChartChores', JSON.stringify(chores));
+  }, [chores]);
 
   // Set the boss and HP based on the number of chores
   useEffect(() => {
@@ -34,8 +48,10 @@ function BossFight({ character }) {
     }
   }, [chores]);
 
-  const handleAddChore = (chore) => {
-    setChores([...chores, chore]);
+  const handleAddChore = () => {
+    const chorePoints = newChore.isRandom ? Math.floor(Math.random() * 10) + 1 : newChore.points;
+    setChores([...chores, { name: newChore.name, points: chorePoints }]);
+    setNewChore({ name: '', points: 0, isRandom: false });
   };
 
   const handleCompleteChore = (chore) => {
@@ -72,9 +88,31 @@ function BossFight({ character }) {
           </li>
         ))}
       </ul>
-      <button onClick={() => handleAddChore({ name: 'New Chore', points: Math.floor(Math.random() * 10) + 1 })}>
-        Add Chore
-      </button>
+      <div className="add-chore">
+        <input
+          type="text"
+          value={newChore.name}
+          onChange={(e) => setNewChore({ ...newChore, name: e.target.value })}
+          placeholder="Chore Name"
+          required
+        />
+        <input
+          type="number"
+          value={newChore.points}
+          onChange={(e) => setNewChore({ ...newChore, points: parseInt(e.target.value, 10) })}
+          placeholder="Chore Points"
+          disabled={newChore.isRandom}
+        />
+        <label>
+          <input
+            type="checkbox"
+            checked={newChore.isRandom}
+            onChange={(e) => setNewChore({ ...newChore, isRandom: e.target.checked })}
+          />
+          Random Points
+        </label>
+        <button onClick={handleAddChore}>Add Chore</button>
+      </div>
       <button onClick={rollDice}>Roll Dice</button>
     </div>
   );
