@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dnd-chore-chart/static/css/main.5b74e7b2.css",
-    "main.js": "/dnd-chore-chart/static/js/main.fa3444d5.js",
+    "main.css": "/dnd-chore-chart/static/css/main.2e868577.css",
+    "main.js": "/dnd-chore-chart/static/js/main.31c31653.js",
     "static/js/488.216fb58a.chunk.js": "/dnd-chore-chart/static/js/488.216fb58a.chunk.js",
     "static/media/dracolich.webp": "/dnd-chore-chart/static/media/dracolich.41ae7d277e2dfb53737e.webp",
     "static/media/vecna.webp": "/dnd-chore-chart/static/media/vecna.91d1bf855bdccbfacd3a.webp",
@@ -14,12 +14,12 @@
     "static/media/beholder.webp": "/dnd-chore-chart/static/media/beholder.849990d22486ff9ebef9.webp",
     "static/media/mind_flayer.webp": "/dnd-chore-chart/static/media/mind_flayer.0966149f29c51975f473.webp",
     "index.html": "/dnd-chore-chart/index.html",
-    "main.5b74e7b2.css.map": "/dnd-chore-chart/static/css/main.5b74e7b2.css.map",
-    "main.fa3444d5.js.map": "/dnd-chore-chart/static/js/main.fa3444d5.js.map",
+    "main.2e868577.css.map": "/dnd-chore-chart/static/css/main.2e868577.css.map",
+    "main.31c31653.js.map": "/dnd-chore-chart/static/js/main.31c31653.js.map",
     "488.216fb58a.chunk.js.map": "/dnd-chore-chart/static/js/488.216fb58a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b74e7b2.css",
-    "static/js/main.fa3444d5.js"
+    "static/css/main.2e868577.css",
+    "static/js/main.31c31653.js"
   ]
 }
